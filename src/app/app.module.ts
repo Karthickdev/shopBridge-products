@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { EditModalComponent } from './edit-modal/edit-modal.component';
 import { FormsModule } from '@angular/forms';
 import { AddModalComponent } from './add-modal/add-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AddModalComponent } from './add-modal/add-modal.component';
     MatDividerModule,
     MatListModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
