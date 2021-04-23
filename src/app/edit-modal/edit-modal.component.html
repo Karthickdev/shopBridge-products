@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{itemDetails.itemName}} Details</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <label>Item Name</label>
+    <input [(ngModel)]="itemDetails.itemName"  type="text">
+    <label>Description</label>
+    <input [(ngModel)]="itemDetails.description" type="text">
+    <label>Price</label>
+    <input [(ngModel)]="itemDetails.price" type="number">
+    <button (click)="save()" type="submit" class="btn btn-primary w-100">SAVE</button>
+  </div>

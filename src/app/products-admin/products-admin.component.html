@@ -6,6 +6,21 @@
   />
   <span>Shop Bridge</span>
   <div class="spacer"></div>
-  <button mat-raised-button color="primary">Add Item</button>
+  <button mat-raised-button color="primary" (click)="openAddModal()">Add Item</button>
+</div>
+<div class="content">
+  <mat-list>
+    <mat-list-item *ngFor="let item of itemList"> 
+      {{item.itemName}} 
+      <div class="spacer"></div>
+      <button mat-icon-button>
+        <mat-icon color="primary" (click)="openEditModal(item)">edit</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon color="warn" (click)="deleteItem(item)">delete</mat-icon>
+      </button>
+     <mat-divider></mat-divider>
+    </mat-list-item>
+   </mat-list>
 </div>
 
